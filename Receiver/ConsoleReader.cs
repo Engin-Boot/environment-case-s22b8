@@ -11,8 +11,9 @@ namespace Receiver
         public DataRecord data;
         public DataRecord ReadConsole()
         {
-            string val;
-            val = Console.ReadLine();
+            //string val;
+            Console.ReadLine();
+            return data;
 
         }
     }
