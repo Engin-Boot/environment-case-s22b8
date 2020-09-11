@@ -10,6 +10,8 @@ namespace Receiver
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("atul\n");
+            string x = Console.ReadLine();
         }
     }
 }
