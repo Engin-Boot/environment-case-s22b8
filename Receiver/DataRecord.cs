@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Receiver
 {
-    class DataRecord
+    public class DataRecord
     {
         private DateTime time;
         private int temperature;
