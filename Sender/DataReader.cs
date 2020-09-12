@@ -45,7 +45,6 @@ namespace Sender
         {
 
             String fileName = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Sender\CSVFile.csv";
-            bool isheader = true;
             reader = dataReader.ReadData(fileName);
             List<string> headers = new List<string>();
             Timer aTimer;

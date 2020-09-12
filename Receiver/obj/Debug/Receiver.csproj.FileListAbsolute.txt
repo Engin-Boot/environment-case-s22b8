@@ -5,3 +5,7 @@ C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Receiver\bi
 C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Receiver\bin\Debug\Receiver.pdb
 C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Receiver\obj\Debug\Receiver.exe
 C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Receiver\obj\Debug\Receiver.pdb
+C:\Users\320105541\source\repos\EnvironmentMonitoring\Receiver\obj\Debug\Receiver.csprojAssemblyReference.cache
+C:\Users\320105541\source\repos\EnvironmentMonitoring\Receiver\obj\Debug\Receiver.csproj.CoreCompileInputs.cache
+C:\Users\320105541\source\repos\EnvironmentMonitoring\Receiver\obj\Debug\Receiver.exe
+C:\Users\320105541\source\repos\EnvironmentMonitoring\Receiver\obj\Debug\Receiver.pdb

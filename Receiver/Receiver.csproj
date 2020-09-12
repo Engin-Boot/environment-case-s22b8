@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAlerter.cs" />
+    <Compile Include="Alerter.cs" />
     <Compile Include="Checker.cs" />
     <Compile Include="ConsoleReader.cs" />
     <Compile Include="DataRecord.cs" />
