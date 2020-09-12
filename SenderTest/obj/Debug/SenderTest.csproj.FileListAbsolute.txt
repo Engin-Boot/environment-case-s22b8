@@ -1,0 +1,2 @@
+C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\SenderTest\obj\Debug\SenderTest.csprojAssemblyReference.cache
+C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\SenderTest\obj\Debug\SenderTest.csproj.CoreCompileInputs.cache
