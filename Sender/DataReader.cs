@@ -5,6 +5,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 
 namespace Sender
@@ -28,10 +29,15 @@ namespace Sender
     {
 
         IDataReader dataReader;
+        List<String> values;
+        StreamReader reader;
 
         public DataSender()
         {
             dataReader = new ReadFromCsv();
+            values=new List<String>();
+            reader=null;
+            
         }
 
 
@@ -40,36 +46,50 @@ namespace Sender
 
             String fileName = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Sender\CSVFile.csv";
             bool isheader = true;
-            var reader = dataReader.ReadData(fileName);
+            reader = dataReader.ReadData(fileName);
             List<string> headers = new List<string>();
-
+            Timer aTimer;
+            aTimer = new System.Timers.Timer();
+            aTimer.Interval = 2000;
+             // Hook up the Elapsed event for the timer. 
+            
+                    
             while (!reader.EndOfStream)
             {
-                var line = reader.ReadLine();
-                var values = line.Split(',');
+                  
+                   
+                    aTimer.Elapsed +=OnTimedEvent;
+                    aTimer.AutoReset = true;
 
-                if (isheader)
-                {
-                    isheader = false;
-                    headers = values.ToList();
+
+                    // Start the timer
+                    aTimer.Enabled = true;
+            
+                    Console.ReadKey();
                     
+             }
+             
+        }
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            if(reader.EndOfStream)
+                return;
+            Console.Clear();
+            String dt=DateTime.UtcNow.ToString("MM-dd-yyyy");
+            Console.Write("{0},{1:HH:mm:ss.fff},",
+                                dt,e.SignalTime);
+            PrintData();
+        }
 
-                }
-                else
-                {
-                    int i = 0;
-                    for (i = 0; i < values.Length; i++)
-                    {
-                        if(i==2)
-                            Console.Write(string.Format("  {0}   =   {1}°C   ;", headers[i], values[i]));
-                        else
-                            Console.Write(string.Format("  {0}   =   {1}   ;", headers[i], values[i]));
-                    }
+        public void PrintData(){
 
-                    Console.WriteLine();
+        if(reader.EndOfStream)
+          return;
 
-                }
-            }
+          var line =reader.ReadLine();
+          values = line.Split(',').ToList();
+          Console.WriteLine("{1},{0}",values[3],values[2]);
+        
         }
     }
 }
