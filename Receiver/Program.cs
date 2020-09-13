@@ -11,11 +11,12 @@ namespace Receiver
 {
     class Program
     {
-        private static Timer aTimer;
+        
         static void Main(string[] args)
         {
+            Timer aTimer;
             aTimer = new System.Timers.Timer();
-            aTimer.Interval = 2000;
+            aTimer.Interval = 10000;
 
             // Hook up the Elapsed event for the timer. 
             aTimer.Elapsed += OnTimedEvent;
@@ -25,13 +26,14 @@ namespace Receiver
 
             // Start the timer
             aTimer.Enabled = true;
+            //Console.ReadKey();
         }
 
         private static void OnTimedEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
             ConsoleReader consoleReader = new ConsoleReader();
             DataRecord dataRecord = consoleReader.ReadConsole();
-            IAlerter alerter = new EmailAlerter();
+            Alerter alerter = new EmailAlert();
             Checker checker = new Checker(alerter);
             checker.Check(dataRecord);
         }
