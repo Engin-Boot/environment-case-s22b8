@@ -74,20 +74,20 @@ namespace Sender
             if(reader.EndOfStream)
                 return;
             Console.Clear();
-            String dt=DateTime.UtcNow.ToString("MM-dd-yyyy");
-            Console.Write("{0},{1:HH:mm:ss.fff},",
-                                dt,e.SignalTime);
+            String dt = DateTime.Now.ToString("dd'/'MM'/'yyyy HH:mm");
+            Console.Write("{0},",dt);
             PrintData();
         }
 
-        public void PrintData(){
+        public void PrintData()
+        {
 
-        if(reader.EndOfStream)
-          return;
+            if(reader.EndOfStream)
+                return;
 
-          var line =reader.ReadLine();
-          values = line.Split(',').ToList();
-          Console.WriteLine("{1},{0}",values[3],values[2]);
+            var line =reader.ReadLine();
+            values = line.Split(',').ToList();
+            Console.WriteLine("{1},{0}",values[3],values[2]);
         
         }
     }
