@@ -45,7 +45,7 @@ namespace Sender
         {
 
             //String fileName = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Sender\CSVFile.csv";
-            string fileName = @".\Sender\CSVFile.csv";
+            string fileName = @"C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\Sender\CSVFile.csv";
             reader = dataReader.ReadData(fileName);
             List<string> headers = new List<string>();
             Timer aTimer;
@@ -74,7 +74,7 @@ namespace Sender
         {
             if(reader.EndOfStream)
                 return;
-            Console.Clear();
+            //Console.Clear();
             String dt = DateTime.Now.ToString("dd'/'MM'/'yyyy HH:mm");
             Console.Write("{0},",dt);
             PrintData();
