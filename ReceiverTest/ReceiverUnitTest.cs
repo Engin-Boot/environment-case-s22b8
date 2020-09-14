@@ -14,6 +14,9 @@ namespace ReceiverTests
         [Fact]
         public void Test(){
         Receiver.ConsoleReader  consoleReader=new Receiver.ConsoleReader();
+            Assert.True(true);
         }
     }
+
+
 }
