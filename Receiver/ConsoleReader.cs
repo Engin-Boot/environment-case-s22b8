@@ -20,6 +20,7 @@ namespace Receiver
                 return this.data;
             }
             var lines = line.Split(',').ToList();
+<<<<<<< Updated upstream
             
             /*
             string fileName = @"C:\Users\320105541\OneDrive - Philips\Desktop\bootcamp\output.txt";
@@ -48,6 +49,9 @@ namespace Receiver
             }
             */
             this.data.Time = DateTime.ParseExact(lines[0],"dd/MM/yyyy HH:mm", null);
+=======
+            this.data.Time = DateTime.ParseExact(lines[0], "dd/MM/yyyy HH:mm", null);
+>>>>>>> Stashed changes
             this.data.Temperature = Convert.ToInt32(lines[1]);
             this.data.Humidity = Convert.ToInt32(lines[2]);
 
