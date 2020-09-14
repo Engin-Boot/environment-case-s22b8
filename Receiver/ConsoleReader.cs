@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Receiver
 {
-    class ConsoleReader
+    public class ConsoleReader
     {
         public DataRecord data = new DataRecord();
 
@@ -17,8 +17,11 @@ namespace Receiver
             line = Console.ReadLine();
             if (line == null) {
                 Console.WriteLine("line null");
+                return this.data;
             }
             var lines = line.Split(',').ToList();
+            
+            /*
             string fileName = @"C:\Users\320105541\OneDrive - Philips\Desktop\bootcamp\output.txt";
 
             try
@@ -41,9 +44,10 @@ namespace Receiver
             }
             catch (Exception Ex)
             {
-                //Console.WriteLine(Ex.ToString());
+                Console.WriteLine(Ex.Message);
             }
-            this.data.Time = DateTime.ParseExact(lines[0], "dd/MM/yyyy HH:mm", null);
+            */
+            this.data.Time = DateTime.ParseExact(lines[0],"dd/MM/yyyy HH:mm", null);
             this.data.Temperature = Convert.ToInt32(lines[1]);
             this.data.Humidity = Convert.ToInt32(lines[2]);
 

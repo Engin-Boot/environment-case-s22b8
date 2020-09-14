@@ -8,9 +8,12 @@ using Receiver;
 
 
 namespace ReceiverTests
-{
+{   
     public class ReceiverUnitTest
     {
-        
+        [Fact]
+        public void Test(){
+        Receiver.ConsoleReader  consoleReader=new Receiver.ConsoleReader();
+        }
     }
 }

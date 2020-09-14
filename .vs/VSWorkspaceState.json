@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Sender",
-    "\\SenderTest",
-    "\\Sender\\Properties"
+    "\\Receiver",
+    "\\ReceiverTest",
+    "\\Receiver\\bin",
+    "\\Receiver\\bin\\Debug",
+    "\\SenderTest"
   ],
-  "SelectedNode": "\\Sender\\DataReader.cs",
+  "SelectedNode": "\\ReceiverTest\\ReceiverUnitTest.cs",
   "PreviewInSolutionExplorer": false
 }

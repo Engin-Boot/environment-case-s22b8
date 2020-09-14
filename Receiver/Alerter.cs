@@ -17,7 +17,7 @@ namespace Receiver
                 EnableSsl = true,
             };
 
-            smtpClient.Send("atuljha2524@gmail.com", "atuljha910@gmail.com", "ALERT", message);
+            smtpClient.Send("atuljha2524@gmail.com", "keshariananya@gmail.com", "ALERT", message);
         }
     }
 }
