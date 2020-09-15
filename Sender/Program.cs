@@ -15,7 +15,7 @@ namespace Sender
         {
             Thread.Sleep(2000);
             DataSender dataReader=new DataSender();
-            String fileName = @"C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\Sender\CSVFile.csv";
+            String fileName = @"Sender\CSVFile.csv";
             dataReader.ReadDataFromCSV(fileName);
             dataReader.ModifyData();
         }
