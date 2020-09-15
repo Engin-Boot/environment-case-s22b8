@@ -6,27 +6,59 @@ using System.Threading.Tasks;
 
 namespace Receiver
 {
-    class Checker
+    public class Checker
     {
-        Alerter alerter;
+        public Alerter alerter;
         public Checker(Alerter alert) {
             this.alerter = alert;
         }
-        public void Check(DataRecord data) {
-            
+        public bool CheckTemperatureError(DataRecord data) 
+        {
             if (data.Temperature >= 40 || data.Temperature <= 0)
             {
                 alerter.Alert("Temperature error");
-            } else if (data.Temperature >= 37 || data.Temperature <= 4)
+                return true;
+            }
+            return false;
+        }
+        public bool CheckTemperatureHighOrLow(DataRecord data)
+        {
+            if (data.Temperature >= 37 || data.Temperature <= 4)
             {
                 alerter.Alert("Temperature too high or too low");
+                return true;
             }
-            
-            if (data.Humidity >= 90) {
+            return false;
+        }
+
+        public bool CheckHumidityError(DataRecord data) 
+        {
+            if (data.Humidity >= 90)
+            {
                 alerter.Alert("humidity error");
-            } else if (data.Humidity >= 70)
+                return true;
+            }
+            return false;
+        }
+
+        public bool CheckHumidityHigh(DataRecord data)
+        {
+            if (data.Humidity >= 70)
             {
                 alerter.Alert("humidity too high");
+                return true;
+            }
+            return false;
+        }
+        public void Check(DataRecord data) 
+        {
+            if (!CheckTemperatureError(data))
+            {
+                CheckTemperatureHighOrLow(data);
+            }
+            if (!CheckHumidityError(data))
+            {
+                CheckHumidityHigh(data);
             }
         }
     }

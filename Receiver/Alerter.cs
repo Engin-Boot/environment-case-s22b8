@@ -5,11 +5,11 @@ namespace Receiver
 {
     public interface Alerter
     {
-        void Alert(string message);
+        bool Alert(string message);
     }
 
     public class EmailAlert : Alerter {
-        public void Alert(string message) {
+            public bool Alert(string message) {
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
@@ -18,6 +18,7 @@ namespace Receiver
             };
 
             smtpClient.Send("atuljha2524@gmail.com", "keshariananya@gmail.com", "ALERT", message);
+            return true;
         }
     }
 }
