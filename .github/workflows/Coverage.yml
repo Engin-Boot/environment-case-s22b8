@@ -21,5 +21,3 @@ jobs:
       
       - name: Check Coverage
         run: powershell ./coverage.ps1 -linerate 1
-
-© 2020 GitHub, Inc.
