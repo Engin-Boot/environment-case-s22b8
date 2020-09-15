@@ -16,7 +16,7 @@ namespace SenderTests
         public void TestIfCSVFileOpens()
         {
             IDataReader dataReader = new ReadFromCsv();
-            String fileName = @"...\Sender\CSVFile.csv";
+            String fileName = @".....\Sender\CSVFile.csv";
             var reader = dataReader.ReadData(fileName);
             Assert.True(reader != null);
         }
@@ -25,7 +25,7 @@ namespace SenderTests
         public void TestIfDataIsPrintedOnTheConsole()
         {
             IDataReader dataReader = new ReadFromCsv();
-            String fileName = @"...\Sender\CSVFile.csv";
+            String fileName = @".....\Sender\CSVFile.csv";
             var reader = dataReader.ReadData(fileName);
             Assert.True(reader != null);
         }
