@@ -18,7 +18,7 @@ WriteXmlToScreen $insdoc
 
 Write-Host ""
 - name: Run resharper duplicate code check
-        run: jb dupfinder EnvironmentMonitoringSystem.sln /output=dupreport.xml
+        run: jb dupfinder EnvironmentMonitoring.sln /output=dupreport.xml
 Write-Host "---------------------------------"
 [xml]$dupdoc = Get-Content -Path dupreport.xml
 WriteXmlToScreen $dupdoc
