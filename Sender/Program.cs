@@ -18,7 +18,7 @@ namespace Sender
             String fileName = @"D:\a\environment-case-s22b8\environment-case-s22b8\Sender\CSVFile.csv";
             dataReader.ReadDataFromCSV(fileName);
             dataReader.ModifyData();
-            Console.ReadKey();
+           
         }
     }
 }
