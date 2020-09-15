@@ -51,7 +51,7 @@ namespace Sender
                 // Start the timer
                 aTimer.Enabled = true;
 
-                //Console.ReadKey();
+                Console.ReadKey();
                 
 
             }
