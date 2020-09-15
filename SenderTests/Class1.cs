@@ -26,7 +26,7 @@ namespace SenderTests
         public void TestIfDataIsPrintedOnTheConsole()
         {
             DataSender dataSender = new DataSender();
-            String fileName = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Sender\CSVFile.csv";
+            String fileName = @"D:\a\environment-case-s22b8\environment-case-s22b8\Sender\CSVFile.csv";
             dataSender.ReadDataFromCSV(fileName);
             dataSender.ModifyData();
 
