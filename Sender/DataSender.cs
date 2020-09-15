@@ -37,7 +37,7 @@ namespace Sender
             Timer aTimer;
             aTimer = new System.Timers.Timer();
             aTimer.Interval = 3000;
-            var fileName = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\SenderOutput.txt";
+            var fileName = @"D:\a\environment-case-s22b8\environment-case-s22b8\SenderOutput.txt";
             File.WriteAllText(fileName, "");
 
             while (!reader.EndOfStream)
