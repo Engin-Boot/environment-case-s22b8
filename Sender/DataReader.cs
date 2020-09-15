@@ -40,20 +40,19 @@ namespace Sender
             
         }
 
+        public void ReadDataFromCSV(String fileName)
+        {
+
+            reader = dataReader.ReadData(fileName);
+        }
 
         public void ModifyData()
         {
-            String fileName=@"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Sender\CSVFile.csv";
-            //String fileName = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Sender\CSVFile.csv";
-            //string fileName = @"C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\Sender\CSVFile.csv";
-            reader = dataReader.ReadData(fileName);
             List<string> headers = new List<string>();
             Timer aTimer;
             aTimer = new System.Timers.Timer();
             aTimer.Interval = 10000;
-             // Hook up the Elapsed event for the timer. 
-            
-                    
+                   
             while (!reader.EndOfStream)
             {
                   

@@ -61,6 +61,9 @@ namespace ReceiverTests
             Receiver.Checker checker = new Checker(alerter);
             checker.Check(dataRecord);
             Assert.True(alerter.Alert(""));
+
         }
     }
+
+
 }
