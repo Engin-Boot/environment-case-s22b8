@@ -30,8 +30,8 @@ namespace SenderTests
             dataSender.ReadDataFromCSV(fileName);
             dataSender.ModifyData();
 
-            fileName = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\SenderOutput.txt";
-            var fileName2 = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\TextOutput.txt";
+            fileName = @"D:\a\environment-case-s22b8\environment-case-s22b8\SenderOutput.txt";
+            var fileName2 = @"D:\a\environment-case-s22b8\environment-case-s22b8\TestOutput.txt";
 
 
             String dt = DateTime.Now.ToString("dd'/'MM'/'yyyy HH:mm");
