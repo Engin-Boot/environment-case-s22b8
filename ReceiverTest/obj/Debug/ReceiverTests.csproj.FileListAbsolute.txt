@@ -9,7 +9,6 @@ C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\Receiv
 C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.execution.desktop.dll
 C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\Receiver.pdb
 C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\Receiver.exe.config
-C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.abstractions.xml
 C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.assert.xml
 C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.core.xml
 C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.execution.desktop.xml
@@ -37,3 +36,7 @@ C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\ReceiverTes
 C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.runner.reporters.net452.dll
 C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.runner.utility.net452.dll
 C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\ReceiverTest\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.runner.reporters.net452.dll
+C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\xunit.runner.utility.net452.dll
+C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\ReceiverTest\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll

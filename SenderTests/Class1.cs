@@ -16,7 +16,7 @@ namespace SenderTests
         public void TestIfCSVFileOpens()
         {
             IDataReader dataReader = new ReadFromCsv();
-            String fileName = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Sender\CSVFile.csv";
+            String fileName = @"C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\Sender\CSVFile.csv";
             var reader = dataReader.ReadData(fileName);
             Assert.True(reader != null);
         }
@@ -25,7 +25,7 @@ namespace SenderTests
         public void TestIfDataIsPrintedOnTheConsole()
         {
             IDataReader dataReader = new ReadFromCsv();
-            String fileName = @"C:\Users\320107420\OneDrive - Philips\Desktop\environment-case-s22b8\Sender\CSVFile.csv";
+            String fileName = @"C:\Users\320105541\OneDrive - Philips\Desktop\boot\environment-case-s22b8\Sender\CSVFile.csv";
             var reader = dataReader.ReadData(fileName);
             Assert.True(reader != null);
         }
