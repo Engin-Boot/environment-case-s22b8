@@ -10,28 +10,24 @@ namespace Receiver
     public class ConsoleReader
     {
         public DataRecord data = new DataRecord();
-
+        public string line = String.Empty;
         public DataRecord ReadConsole()
         {
-            string line;
-            line = Console.ReadLine();
-            if (line == null) {
-                Console.WriteLine("line null");
-                return this.data;
+            if (String.IsNullOrEmpty(line)) {
+                line = Console.ReadLine();
             }
             var lines = line.Split(',').ToList();
-
-        
-           
-           
-            this.data.Time = DateTime.ParseExact(lines[0], "dd/MM/yyyy HH:mm", null);
+            try
+            {
+                this.data.Time = Convert.ToDateTime(lines[0]);
+            }
+            catch (Exception e)
+            {
+                this.data.Time = DateTime.ParseExact(lines[0], "dd/MM/yyyy HH:mm", null);
+            }
 
             this.data.Temperature = Convert.ToInt32(lines[1]);
             this.data.Humidity = Convert.ToInt32(lines[2]);
-
-
-            
-
             return this.data;
         }
     }

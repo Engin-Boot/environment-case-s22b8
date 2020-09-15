@@ -30,7 +30,6 @@ namespace Receiver
             }
             return false;
         }
-
         public bool CheckHumidityError(DataRecord data) 
         {
             if (data.Humidity >= 90)
@@ -40,7 +39,6 @@ namespace Receiver
             }
             return false;
         }
-
         public bool CheckHumidityHigh(DataRecord data)
         {
             if (data.Humidity >= 70)

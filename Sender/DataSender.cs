@@ -42,7 +42,7 @@ namespace Sender
 
             while (!reader.EndOfStream)
             {
-                
+
 
                 aTimer.Elapsed += OnTimedEvent;
                 aTimer.AutoReset = true;
@@ -53,6 +53,7 @@ namespace Sender
 
                 //Console.ReadKey();
                 
+
             }
 
         }
