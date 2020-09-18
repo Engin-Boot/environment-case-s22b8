@@ -1,5 +1,3 @@
-param($linerate)
-
 function WriteXmlToScreen ([xml]$xml)
 {
     $StringWriter = New-Object System.IO.StringWriter;
@@ -11,35 +9,46 @@ function WriteXmlToScreen ([xml]$xml)
     Write-Output $StringWriter.ToString();
 }
 
-$report = Get-Content -Path UnitTestProject\TestResults\*\coverage.cobertura.xml | Out-String
-Write-Host "---------------------------------"
-Write-Host "Code Coverage report ..." 
-Write-Host "---------------------------------"
-WriteXmlToScreen $report
 
-[xml]$doc = $report
+Write-Host "---------------------------------"
+Write-Host "Resharper code inspection report..." 
+Write-Host "---------------------------------"
+[xml]$insdoc = Get-Content -Path insreport.xml
+WriteXmlToScreen $insdoc
 
 Write-Host ""
 Write-Host "---------------------------------"
-Write-Host "Code Coverage report Analysis..." 
+Write-Host "Resharper code duplication report..." 
 Write-Host "---------------------------------"
+[xml]$dupdoc = Get-Content -Path dupreport.xml
+WriteXmlToScreen $dupdoc
+
+Write-Host ""
+Write-Host "---------------------------------"
+Write-Host "Resharper report analysis..." 
+Write-Host "---------------------------------"
+
+$issuetypes = $insdoc.SelectNodes("//IssueTypes/IssueType")
 
 $result = 0
 
-Write-Host "Line-Coverage: ["$doc.coverage.'line-rate'"] Branch-Coverage: ["$doc.coverage.'branch-rate'"]"
-Write-Host ""
- foreach ($pkg in $doc.coverage.packages.package) {
-    Write-Host "Package:"  $pkg.name "Line-Coverage:"$pkg.'line-rate'
-
-    if($pkg.'line-rate' -lt $linerate){
-        $result= 1
-       }
-    }
-
-if($result -eq 1){
-    Write-Host "Coverage Check: failed" -ForegroundColor red 
+if($issuetypes.count -eq 0){
+    Write-Host "Number of Inspection Violations:" $issuetypes.count -ForegroundColor green 
 }
 else{
-    Write-Host "Coverage Check: Passed" -ForegroundColor green 
+    Write-Host "Number of Inspection Violations:" $issuetypes.count -ForegroundColor red
+    $result = 1
 }
+
+
+$duplicateCost = $dupdoc.DuplicatesReport.Statistics.TotalDuplicatesCost
+
+if($duplicateCost -eq 0){
+    Write-Host "Cost of Duplicate Code:" $duplicateCost -ForegroundColor green 
+}
+else{
+    Write-Host "Cost of Duplicate Code:" $duplicateCost -ForegroundColor red 
+    $result = 1
+}
+
 exit $result
